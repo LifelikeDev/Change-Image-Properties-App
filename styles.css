@@ -1,0 +1,151 @@
+:root {
+  --thickness: 10px;
+  --b-radius: 5px;
+  --color: #ffc600;
+  --blur: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: Arial, sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  background: #2e3436;
+  min-height: 100vh;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  width: 80%;
+  height: 95vh;
+}
+h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.control-box {
+  width: 80%;
+  margin: 4rem auto 2rem;
+}
+.controls {
+  width: 50%;
+  height: 30vh;
+  margin: 0 auto;
+}
+.controls .control {
+  height: 6vh;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  font-size: 2.6rem;
+  font-weight: 600;
+  font-family: monospace;
+  margin-bottom: 0.6rem;
+  color: #cbbaba;
+}
+.control label {
+  width: 50%;
+  /*   max-width: 50%; */
+}
+
+.image {
+  width: 45vw;
+  height: 47vh;
+  margin: 0 auto;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--b-radius);
+  border: var(--thickness) solid var(--color);
+  filter: blur(var(--blur));
+}
+span.color {
+  color: var(--color);
+}
+
+/* Responsiveness wih Media Queries */
+
+@media (max-width: 1025px) {
+  .image {
+    width: 50vw;
+    height: 40vh;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 730px) {
+  .control-box {
+    width: 100%;
+  }
+  .controls .control {
+    font-size: 2.3rem;
+  }
+  .control input {
+    width: 20vw;
+  }
+}
+@media (max-width: 670px) {
+  .image {
+    height: 45vh;
+  }
+}
+@media (max-width: 585px) {
+  .control-box {
+    margin-bottom: 1.5rem;
+  }
+  .controls .control {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 530px) {
+  .image {
+    width: 43vw;
+    height: 40vh;
+  }
+}
+@media (max-width: 480px) {
+  .wrapper {
+    width: 90%;
+  }
+  h1 {
+    font-size: 2.8rem;
+  }
+  .image {
+    width: 60vw;
+    height: 40vh;
+  }
+}
+@media (max-width: 397px) {
+  .control input {
+    width: 17vw;
+  }
+  .controls .control {
+    font-size: 2.1rem;
+  }
+  .image {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 370px) {
+  .controls .control {
+    width: 120%;
+  }
+  .image {
+    height: 35vh;
+  }
+}

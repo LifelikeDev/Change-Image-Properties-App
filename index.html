@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Change Image Properties</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Use the controls below to change the properties of the <span class="color">image</span> below.</h1>
+
+        <div class="control-box">
+            <div class="controls">
+                <div class="control control-thickness">
+                    <label for="thickness">Frame Thickness</label>
+                    <input type="range" name="thickness" value="5" min="1" max="100" data-sizing="px">
+                </div>
+                <div class="control control-bradius">
+                    <label for="b-radius">Frame Radius</label>
+                    <input type="range" name="b-radius" value="2" min="1" max="200" data-sizing="px">
+                </div>
+                <div class="control control-color">
+                    <label for="color">Frame Color</label>
+                    <input type="color" name="color" id="b-radius" value="#ffc600">
+                </div>
+                <div class="control control-blur">
+                    <label for="blur">Image Blur</label>
+                    <input type="range" name="blur" id="blur" value="0" min="0" max="15" data-sizing="px">
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <img src="chevy.jpg" alt="car_img">
+        </div>
+
+
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
